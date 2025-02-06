@@ -255,17 +255,17 @@ export default () => {
       e.preventDefault()
       create()
     }
-    if (key === KEYS.MINUS) {
+    if (ctrlOrMetaKeyActive && key === KEYS.MINUS) {
       if (disableHotkeys.value) return
       e.preventDefault()
       scaleCanvas('-')
     }
-    if (key === KEYS.EQUAL) {
+    if (ctrlOrMetaKeyActive && key === KEYS.EQUAL) {
       if (disableHotkeys.value) return
       e.preventDefault()
       scaleCanvas('+')
     }
-    if (key === KEYS.DIGIT_0) {
+    if (ctrlOrMetaKeyActive && key === KEYS.DIGIT_0) {
       if (disableHotkeys.value) return
       e.preventDefault()
       resetCanvas()
